@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Personal Portfolio Website</title>
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Open+Sans" rel="stylesheet">
   </head>
@@ -12,118 +12,184 @@
   <div class="sidebar">
 
 
-    <img class="sidebarImage" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Misc/Portriat.jpg" title="Art by Zoe">
+    <img class="sidebarImage" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Misc/Face+STL.jpg" title="This website was built in an effort to learn web development! You can find more info at my GitHub page.">
 
-        <H1>David Preiss</H1>
-    
+    <H1>David Preiss</H1>
+
     <div class="sidebarLinks">
       <a>davepreiss@gmail.com</a>
-      <a href="https://github.com/davepreiss" target="_blank"> Github <br></a>
+      <a href="https://github.com/davepreiss" target="_blank"> GitHub <br></a>
       <a> <br>I am a mechanical engineer living in Durham, NC. My interests are in product development, digital fabrication, and DIY projects of all kinds!</a>
     </div>
   </div>
 
   <div id="portfolio">
-    <p href="" data-rel="all" id="allbutton">All</p>
-    <p data-rel="professional" id="professionalbutton">Professional</p>
-    <p data-rel="personal" id="personalbutton">Personal</p>
-    <div style="clear:both;"></div>
-
-    <div class="tile professional all">
-     <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+Full+Static.JPG" id="moku">
-      <div class="thumbnailTitle">
-        <figcaption>Sunglasses Manufacturing</figcaption>
-        <div class="thumbnailSubText">
-          <figcaption>Turnkey CNC solution for company manufacturing wooden sunglasses.</figcaption>
-        </div>
-      </div>
+    <div id="menu">
+      <p href="" data-rel="all" id="allbutton">All</p>
+      <p data-rel="professional" id="professionalbutton">Professional</p>
+      <p data-rel="personal" id="personalbutton">Personal</p>
+      <div style="clear:both;"></div>
     </div>
-    
-    <div class="tile professional all">
-      <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/6+in+Indexer/6+Indexer+Newel.jpg" name="6Indexer">
-
-      <div class="thumbnailTitle">
-        <figcaption>Desktop MAX 6" Indexer</figcaption>
-        <div class="thumbnailSubText">
-          <figcaption>Design and production of a rotary axis for the Desktop MAX.</figcaption>
-        </div>
+    <!-- This is the modal that is displayed on tile clicks -->
+    <div id="myModal">
+      <div id="closebutton">
+        <p>&#10006</p>
       </div>
+      <figcaption id="projectTitle">
+        project title
+      </figcaption>
+      <h1 id="projectDescription">
+      project description
+    </h1>
+      <img id="projectImage" alt="#" src="">
+
     </div>
-
-
-    <div class="tile personal all">
-      <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Assembled.jpg">
-      <div class="thumbnailTitle">
-        <figcaption>Parametric Desk</figcaption>
-        <div class="thumbnailSubText">
-          <figcaption>Parametric design of a customizable CNC desk.</figcaption>
-        </div>
-      </div>
-    </div>
-
-    <div class="tile professional all">
-     <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/EOT/EOT+Cutting+Still.jpg" id="EOT">
-
-      <div class="thumbnailTitle">
-        <figcaption>Oscillating Tangential Knife</figcaption>
-        <div class="thumbnailSubText">
-          <figcaption>Integration of ECOCAM's EOT3 with ShopBot's gantry tools/control software.</figcaption>
+    <div id="tiles">
+      <div class="tile professional all moku">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+Full+Static.JPG" id="moku">
+        <div class="thumbnailTitle">
+          <figcaption>Sunglasses Manufacturing</figcaption>
+          <figcaption class="thumbnailSubText">Turnkey CNC solution for company manufacturing wooden sunglasses.
+                       <div class ="modalOnly">                    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam purus sed neque auctor, in vehicula mauris accumsan. Quisque at varius ex. Duis congue aliquet mi, in porttitor justo luctus non. Vivamus maximus turpis ac urna
+              sagittis, quis venenatis orci ullamcorper. Morbi euismod metus in justo sodales pharetra. Nunc ultrices hendrerit ipsum, ut congue diam mattis non. Morbi quis nisi mi. Maecenas tincidunt et erat sit amet ornare. Nullam vulputate malesuada
+              nisl, nec fermentum magna facilisis quis. Nunc rutrum nisl quis aliquet varius. Vestibulum luctus urna ut nisl viverra mollis. Nullam a quam pretium, elementum elit eget, commodo leo. Donec vitae volutpat est. Sed maximus massa ac mi suscipit
+              laoreet. Praesent aliquam ultricies ante non varius. Sed sed ante bibendum, consequat tortor non, mattis neque. Cras malesuada pulvinar ultricies. Curabitur ante erat, cursus pulvinar velit pellentesque, sodales tincidunt diam. Integer ac
+              mollis leo. Nulla finibus consectetur justo sed posuere. Morbi ornare turpis egestas, sodales elit ac, feugiat ligula. Maecenas id est sit amet lorem ultricies scelerisque. Aliquam nec velit ligula.</p>
+            </div>
+          </figcaption>
         </div>
       </div>
 
-    </div>
+      <div class="tile professional all indexer">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/6+in+Indexer/6+Indexer+Newel.jpg" id="indexer">
 
-    <div class="tile professional all">
-     <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/MAX+Tray/Tray+Acrylic.jpg">
-      <div class="thumbnailTitle">
-        <figcaption>Desktop MAX Electronics Tray</figcaption>
-        <div class="thumbnailSubText">
-          <figcaption>Redesign of electronics tray conforming to UL Standards.</figcaption>
+        <div class="thumbnailTitle">
+          <figcaption>Desktop MAX 6" Indexer</figcaption>
+          <figcaption class="thumbnailSubText">Design and production of a rotary axis for the Desktop MAX.
+                                 <div class ="modalOnly">                    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam purus sed neque auctor, in vehicula mauris accumsan. Quisque at varius ex. Duis congue aliquet mi, in porttitor justo luctus non. Vivamus maximus turpis ac urna
+              sagittis, quis venenatis orci ullamcorper. Morbi euismod metus in justo sodales pharetra. Nunc ultrices hendrerit ipsum, ut congue diam mattis non. Morbi quis nisi mi. Maecenas tincidunt et erat sit amet ornare. Nullam vulputate malesuada
+              nisl, nec fermentum magna facilisis quis. Nunc rutrum nisl quis aliquet varius. Vestibulum luctus urna ut nisl viverra mollis. Nullam a quam pretium, elementum elit eget, commodo leo. Donec vitae volutpat est. Sed maximus massa ac mi suscipit
+              laoreet. Praesent aliquam ultricies ante non varius. Sed sed ante bibendum, consequat tortor non, mattis neque. Cras malesuada pulvinar ultricies. Curabitur ante erat, cursus pulvinar velit pellentesque, sodales tincidunt diam. Integer ac
+              mollis leo. Nulla finibus consectetur justo sed posuere. Morbi ornare turpis egestas, sodales elit ac, feugiat ligula. Maecenas id est sit amet lorem ultricies scelerisque. Aliquam nec velit ligula.</p>
+            </div>
+            </figcaption>
         </div>
       </div>
-    </div>
 
-    <div class="tile professional all">
-    <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Manual+%2B2/Manual+Complete.jpg">
-      <div class="thumbnailTitle">
-        <figcaption>Handibot Rotary Axes</figcaption>
-        <div class="thumbnailSubText">
-          <figcaption>Open Source multi-axis machining platform.</figcaption>
+
+      <div class="tile personal all desk">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Assembled.jpg" id="desk">
+        <div class="thumbnailTitle">
+          <figcaption>Parametric Desk</figcaption>
+          <figcaption class="thumbnailSubText">Parametric design of a customizable CNC desk.
+                                           <div class ="modalOnly">                    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam purus sed neque auctor, in vehicula mauris accumsan. Quisque at varius ex. Duis congue aliquet mi, in porttitor justo luctus non. Vivamus maximus turpis ac urna
+              sagittis, quis venenatis orci ullamcorper. Morbi euismod metus in justo sodales pharetra. Nunc ultrices hendrerit ipsum, ut congue diam mattis non. Morbi quis nisi mi. Maecenas tincidunt et erat sit amet ornare. Nullam vulputate malesuada
+              nisl, nec fermentum magna facilisis quis. Nunc rutrum nisl quis aliquet varius. Vestibulum luctus urna ut nisl viverra mollis. Nullam a quam pretium, elementum elit eget, commodo leo. Donec vitae volutpat est. Sed maximus massa ac mi suscipit
+              laoreet. Praesent aliquam ultricies ante non varius. Sed sed ante bibendum, consequat tortor non, mattis neque. Cras malesuada pulvinar ultricies. Curabitur ante erat, cursus pulvinar velit pellentesque, sodales tincidunt diam. Integer ac
+              mollis leo. Nulla finibus consectetur justo sed posuere. Morbi ornare turpis egestas, sodales elit ac, feugiat ligula. Maecenas id est sit amet lorem ultricies scelerisque. Aliquam nec velit ligula.</p>
+            </div>
+            </figcaption>
         </div>
       </div>
-    </div>
 
-    <div class="tile personal all">
-     <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Nelson+Bench/Nelson+Machining+Static.jpg" id="nelson">
-      <div class="thumbnailTitle">
-        <figcaption>Nelson Bench</figcaption>
-        <div class="thumbnailSubText">
-          <figcaption>Parametric design of the popular Nelson Bench for digital fabrication.</figcaption>
+      <div class="tile professional all EOT">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/EOT/EOT+Cutting+Still.jpg" id="EOT">
+
+        <div class="thumbnailTitle">
+          <figcaption>Oscillating Tangential Knife</figcaption>
+          <figcaption class="thumbnailSubText">Integration of ECOCAM's EOT3 with ShopBot's gantry tools/control software.           <div class ="modalOnly">                    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam purus sed neque auctor, in vehicula mauris accumsan. Quisque at varius ex. Duis congue aliquet mi, in porttitor justo luctus non. Vivamus maximus turpis ac urna
+              sagittis, quis venenatis orci ullamcorper. Morbi euismod metus in justo sodales pharetra. Nunc ultrices hendrerit ipsum, ut congue diam mattis non. Morbi quis nisi mi. Maecenas tincidunt et erat sit amet ornare. Nullam vulputate malesuada
+              nisl, nec fermentum magna facilisis quis. Nunc rutrum nisl quis aliquet varius. Vestibulum luctus urna ut nisl viverra mollis. Nullam a quam pretium, elementum elit eget, commodo leo. Donec vitae volutpat est. Sed maximus massa ac mi suscipit
+              laoreet. Praesent aliquam ultricies ante non varius. Sed sed ante bibendum, consequat tortor non, mattis neque. Cras malesuada pulvinar ultricies. Curabitur ante erat, cursus pulvinar velit pellentesque, sodales tincidunt diam. Integer ac
+              mollis leo. Nulla finibus consectetur justo sed posuere. Morbi ornare turpis egestas, sodales elit ac, feugiat ligula. Maecenas id est sit amet lorem ultricies scelerisque. Aliquam nec velit ligula.</p>
+            </div>
+            </figcaption>
+        </div>
+
+      </div>
+
+      <div class="tile professional all tray">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/MAX+Tray/Tray+Acrylic.jpg" id="tray">
+        <div class="thumbnailTitle">
+          <figcaption>Desktop MAX Electronics Tray</figcaption>
+          <figcaption class="thumbnailSubText">Redesign of electronics tray conforming to UL Standards.
+            <div class ="modalOnly">                    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam purus sed neque auctor, in vehicula mauris accumsan. Quisque at varius ex. Duis congue aliquet mi, in porttitor justo luctus non. Vivamus maximus turpis ac urna
+              sagittis, quis venenatis orci ullamcorper. Morbi euismod metus in justo sodales pharetra. Nunc ultrices hendrerit ipsum, ut congue diam mattis non. Morbi quis nisi mi. Maecenas tincidunt et erat sit amet ornare. Nullam vulputate malesuada
+              nisl, nec fermentum magna facilisis quis. Nunc rutrum nisl quis aliquet varius. Vestibulum luctus urna ut nisl viverra mollis. Nullam a quam pretium, elementum elit eget, commodo leo. Donec vitae volutpat est. Sed maximus massa ac mi suscipit
+              laoreet. Praesent aliquam ultricies ante non varius. Sed sed ante bibendum, consequat tortor non, mattis neque. Cras malesuada pulvinar ultricies. Curabitur ante erat, cursus pulvinar velit pellentesque, sodales tincidunt diam. Integer ac
+              mollis leo. Nulla finibus consectetur justo sed posuere. Morbi ornare turpis egestas, sodales elit ac, feugiat ligula. Maecenas id est sit amet lorem ultricies scelerisque. Aliquam nec velit ligula.</p>
+            </div>
+              </figcaption>
         </div>
       </div>
-    </div>
 
-    <div class="tile professional all">
-     <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/PSZZP/PSZZP+FZZP+Static.jpg" id="pszzp">
-      <div class="thumbnailTitle">
-        <figcaption>Pressure Sensetive Z-Zero Plate</figcaption>
-        <div class="thumbnailSubText">
-          <figcaption>Accessory for zeronig a CNC's Z-axis, accurate to within +-0.0005".</figcaption>
+      <div class="tile professional all rotary">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Manual+%2B2/Manual+Complete.jpg" id="rotary">
+        <div class="thumbnailTitle">
+          <figcaption>Handibot Rotary Axes</figcaption>
+          <figcaption class="thumbnailSubText">Open Source multi-axis machining platform.
+                                          <div class ="modalOnly">                    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam purus sed neque auctor, in vehicula mauris accumsan. Quisque at varius ex. Duis congue aliquet mi, in porttitor justo luctus non. Vivamus maximus turpis ac urna
+              sagittis, quis venenatis orci ullamcorper. Morbi euismod metus in justo sodales pharetra. Nunc ultrices hendrerit ipsum, ut congue diam mattis non. Morbi quis nisi mi. Maecenas tincidunt et erat sit amet ornare. Nullam vulputate malesuada
+              nisl, nec fermentum magna facilisis quis. Nunc rutrum nisl quis aliquet varius. Vestibulum luctus urna ut nisl viverra mollis. Nullam a quam pretium, elementum elit eget, commodo leo. Donec vitae volutpat est. Sed maximus massa ac mi suscipit
+              laoreet. Praesent aliquam ultricies ante non varius. Sed sed ante bibendum, consequat tortor non, mattis neque. Cras malesuada pulvinar ultricies. Curabitur ante erat, cursus pulvinar velit pellentesque, sodales tincidunt diam. Integer ac
+              mollis leo. Nulla finibus consectetur justo sed posuere. Morbi ornare turpis egestas, sodales elit ac, feugiat ligula. Maecenas id est sit amet lorem ultricies scelerisque. Aliquam nec velit ligula.</p>
+            </div>
         </div>
       </div>
-    </div>
 
-    <div class="tile personal all">
-    <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Volume/Volume+Unpainted.jpg">
-      <div class="thumbnailTitle">
-        <figcaption>Parametric Climbing Volumes</figcaption>
-        <div class="thumbnailSubText">
-          <figcaption>App for generating tetrahedrons of arbitray dimensions.</figcaption>
+      <div class="tile personal all nelson">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Nelson+Bench/Nelson+Machining+Static.jpg" id="nelson">
+        <div class="thumbnailTitle">
+          <figcaption>Nelson Bench</figcaption>
+          <figcaption class="thumbnailSubText">Parametric design of the popular Nelson Bench for digital fabrication.
+                                         <div class ="modalOnly">                    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam purus sed neque auctor, in vehicula mauris accumsan. Quisque at varius ex. Duis congue aliquet mi, in porttitor justo luctus non. Vivamus maximus turpis ac urna
+              sagittis, quis venenatis orci ullamcorper. Morbi euismod metus in justo sodales pharetra. Nunc ultrices hendrerit ipsum, ut congue diam mattis non. Morbi quis nisi mi. Maecenas tincidunt et erat sit amet ornare. Nullam vulputate malesuada
+              nisl, nec fermentum magna facilisis quis. Nunc rutrum nisl quis aliquet varius. Vestibulum luctus urna ut nisl viverra mollis. Nullam a quam pretium, elementum elit eget, commodo leo. Donec vitae volutpat est. Sed maximus massa ac mi suscipit
+              laoreet. Praesent aliquam ultricies ante non varius. Sed sed ante bibendum, consequat tortor non, mattis neque. Cras malesuada pulvinar ultricies. Curabitur ante erat, cursus pulvinar velit pellentesque, sodales tincidunt diam. Integer ac
+              mollis leo. Nulla finibus consectetur justo sed posuere. Morbi ornare turpis egestas, sodales elit ac, feugiat ligula. Maecenas id est sit amet lorem ultricies scelerisque. Aliquam nec velit ligula.</p>
+            </div>
         </div>
       </div>
+
+      <div class="tile professional all pszzp">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/PSZZP/PSZZP+FZZP+Static.jpg" id="pszzp">
+        <div class="thumbnailTitle">
+          <figcaption>Pressure Sensetive Z-Zero Plate</figcaption>
+          <figcaption class="thumbnailSubText">Accessory for zeronig a CNC's Z-axis, accurate to within +-0.0005".
+                                     <div class ="modalOnly">                    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam purus sed neque auctor, in vehicula mauris accumsan. Quisque at varius ex. Duis congue aliquet mi, in porttitor justo luctus non. Vivamus maximus turpis ac urna
+              sagittis, quis venenatis orci ullamcorper. Morbi euismod metus in justo sodales pharetra. Nunc ultrices hendrerit ipsum, ut congue diam mattis non. Morbi quis nisi mi. Maecenas tincidunt et erat sit amet ornare. Nullam vulputate malesuada
+              nisl, nec fermentum magna facilisis quis. Nunc rutrum nisl quis aliquet varius. Vestibulum luctus urna ut nisl viverra mollis. Nullam a quam pretium, elementum elit eget, commodo leo. Donec vitae volutpat est. Sed maximus massa ac mi suscipit
+              laoreet. Praesent aliquam ultricies ante non varius. Sed sed ante bibendum, consequat tortor non, mattis neque. Cras malesuada pulvinar ultricies. Curabitur ante erat, cursus pulvinar velit pellentesque, sodales tincidunt diam. Integer ac
+              mollis leo. Nulla finibus consectetur justo sed posuere. Morbi ornare turpis egestas, sodales elit ac, feugiat ligula. Maecenas id est sit amet lorem ultricies scelerisque. Aliquam nec velit ligula.</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="tile personal all volume">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Volume/Volume+Unpainted.jpg" id="volume">
+        <div class="thumbnailTitle">
+          <figcaption>Parametric Climbing Volumes</figcaption>
+          <figcaption class="thumbnailSubText">App for generating tetrahedrons of arbitray dimensions.
+                                       <div class ="modalOnly">                    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam purus sed neque auctor, in vehicula mauris accumsan. Quisque at varius ex. Duis congue aliquet mi, in porttitor justo luctus non. Vivamus maximus turpis ac urna
+              sagittis, quis venenatis orci ullamcorper. Morbi euismod metus in justo sodales pharetra. Nunc ultrices hendrerit ipsum, ut congue diam mattis non. Morbi quis nisi mi. Maecenas tincidunt et erat sit amet ornare. Nullam vulputate malesuada
+              nisl, nec fermentum magna facilisis quis. Nunc rutrum nisl quis aliquet varius. Vestibulum luctus urna ut nisl viverra mollis. Nullam a quam pretium, elementum elit eget, commodo leo. Donec vitae volutpat est. Sed maximus massa ac mi suscipit
+              laoreet. Praesent aliquam ultricies ante non varius. Sed sed ante bibendum, consequat tortor non, mattis neque. Cras malesuada pulvinar ultricies. Curabitur ante erat, cursus pulvinar velit pellentesque, sodales tincidunt diam. Integer ac
+              mollis leo. Nulla finibus consectetur justo sed posuere. Morbi ornare turpis egestas, sodales elit ac, feugiat ligula. Maecenas id est sit amet lorem ultricies scelerisque. Aliquam nec velit ligula.</p>
+            </div></figcaption>
+        </div>
+      </div>
+
+
     </div>
-
-
   </div>
 </div>
   

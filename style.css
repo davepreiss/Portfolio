@@ -1,18 +1,164 @@
-.container { position:relative; padding:0 0 0 55px; }
-.sidebar { position:absolute; top:0; bottom:0; left:0; width:130px;}
-H1{ font-family: 'Open Sans'; font-size: 30px; color: #663366; }
-.sidebarImage { padding-left:15px; width: 140px }
-.sidebarLinks { font-family: 'Open Sans', sans-serif; font-size: 12px; }
+.container {
+  position: relative;
+  padding: 0 0 0 55px;
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 110px;
+}
+H1 {
+  font-family: 'Open Sans';
+  font-size: 30px;
+  color: #663366;
+  padding-left: 30px;
+}
+.sidebarImage {
+  padding-left: 15px;
+  width: 140px;
+}
+.sidebarLinks {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
 
-#portfolio { width:100%; margin:20px 0px; padding-left: 120px;}
-.tile { float:left; height: 250px;  border:6px #fff solid;}
-.tile:hover { opacity: 0.90; }
-.thumbnail {  padding: 3px; height: 187px; width: auto; overflow: hidden;   border-radius: 5px;}
-.thumbnailTitle {font-family: 'Baloo Bhaina', bold; font-size: 16px;color: #1a1a1a; text-align:left; height: 63px; width: auto; word-wrap: break-word; padding-left: 8px;}
-.thumbnailSubText {font-family: 'Open Sans', sans-serif; font-size: 10px; color: #1a1a1a; text-align:left; }
+#portfolio {
+  width: auto;
+  margin: 20px 0px;
+  padding-left: 120px;
+}
+.tile {
+  float: left;
+  height: 250px;
+  border: 6px #fff solid;
+  width: auto;
+}
 
-.professional { background:#E8E8E8; }
-.personal { background: #eaf0fa;}
-.web { background: #ddd; }
-p{ padding:10px; border-bottom: 1px #ccc dotted; text-decoration: none; font-family: 'Open Sans'; text-transform:uppercase; font-size: 12px; color: #333; display:block; float:left;}
-p:hover { cursor:pointer; background: #663366; color:#eee; }
+.tile:hover {
+  opacity: 0.90;
+}
+.thumbnail {
+  padding: 3px;
+  height: 187px;
+  width: auto;
+  text-overflow: ellipsis;
+  border-radius: 5px;
+}
+.thumbnailTitle {
+  font-family: 'Baloo Bhaina', bold;
+  font-size: 16px;
+  color: #1a1a1a;
+  text-align: left;
+  height: 63px;
+  width: auto;
+  word-wrap: break-word;
+  padding-left: 8px;
+}
+
+.thumbnailSubText {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  float: left;
+  color: #1a1a1a;
+  width: auto;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modalOnly {
+display: none;
+}
+
+#myModal .modalOnly {
+display: inline;
+}
+
+.professional {
+  background: #F5F5F5;
+}
+.personal {
+  background: #eaf0fa;
+}
+.web {
+  background: #ddd;
+}
+#menu p {
+  padding: 10px;
+  border-bottom: 1px #ccc dotted;
+  text-decoration: none;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #333;
+  display: block;
+  float: left;
+}
+#menu p:hover {
+  cursor: pointer;
+  background: #663366;
+  color: #eee;
+}
+
+#filter {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: .9;
+  z-index: 10;
+}
+
+#myModal {
+  display: none;
+  float: left;
+  width: 840px;
+  height: auto;
+  border: 6px #fff solid;
+  background: #F5F5F5;
+  border-radius: 14px;
+}
+
+#projectTitle {
+  font-family: 'Baloo Bhaina', bold;
+  font-size: 25px;
+  color: #1a1a1a;
+  text-align: left;
+  width: auto;
+  word-wrap: break-word;
+  padding-left: 22px;
+  padding-top: 15px;
+  
+}
+
+#projectDescription {
+  font-size: 12px;
+  color: #1a1a1a;
+  padding-left: 22px;
+  padding-bottom: 8px;
+  font-family: 'Open Sans';
+  width: 780px;
+}
+
+#projectImage {
+    width: 800px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#closebutton{
+  float: right;
+  color: 505050;
+  width: 30px;
+  text-align: center;
+  margin: 0px 10px 0px 0;
+  cursor: pointer;
+}

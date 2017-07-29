@@ -1,97 +1,201 @@
-// This code hides tiles depending on which button is pressed. Couldn't find a great way to do it without jQuery so as of now just setting width to 0 and collapsing visibilty. Would ideally like to actually fade out elements.
-
-document.getElementById("allbutton").onclick = function() {clickall()};
+// This code hides or displays tiles depending on which of the menu buttons are pressed - All - PROFESSIONAL - OR - PERSONAL.
+document.getElementById("allbutton").onclick = function() {
+  clickall();
+};
 
 function clickall() {
   var y = document.getElementsByClassName("all");
-var i;
-for (i = 0; i < y.length; i++) {
-    y[i].style.visibility="visible";
-    y[i].style.width="auto";
-}
+  var i;
+  for (i = 0; i < y.length; i++) {
+    y[i].style.display = "inline";
+  }
 }
 
-document.getElementById("personalbutton").onclick = function() {clickPersonal()};
+document.getElementById("personalbutton").onclick = function() {
+  clickPersonal();
+};
 
 function clickPersonal() {
   var x = document.getElementsByClassName("professional");
-var i;
-for (i = 0; i < x.length; i++) {
-    x[i].style.visibility="hidden";
-    x[i].style.width=0;
-}
-var z = document.getElementsByClassName("personal");
-i = 0;
-for (i = 0; i < z.length; i++) {
-    z[i].style.visibility="visible";
-    z[i].style.width="auto";
-}
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var z = document.getElementsByClassName("personal");
+  i = 0;
+  for (i = 0; i < z.length; i++) {
+    z[i].style.display = "inline";
+  }
 }
 
-document.getElementById("professionalbutton").onclick = function() {clickProfessional()};
+document.getElementById("professionalbutton").onclick = function() {
+  clickProfessional();
+};
 
 function clickProfessional() {
   var z = document.getElementsByClassName("personal");
-var i;
-for (i = 0; i < z.length; i++) {
-    z[i].style.visibility="hidden";
-    z[i].style.width=0;
-}
-var x = document.getElementsByClassName("professional");
-i=0;
-for (i = 0; i < x.length; i++) {
-    x[i].style.visibility="visible";
-    x[i].style.width="auto";
-}
+  var i;
+  for (i = 0; i < z.length; i++) {
+    z[i].style.display = "none";
+  }
+  var x = document.getElementsByClassName("professional");
+  i = 0;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "inline";
+  }
 }
 
-
-
-//Seems that these fades could be done with pure CSS but using this as an opportunity to practice javascript. May want the tile to enlarge and dislay aditional information on mouseover in the future.
+//Seems that these fades could be done with pure CSS but using this as an opportunity to practice javascript.
 
 // For some reason the pszzp element is not consistently switching to a gif.
-
-document.getElementById("EOT").onmouseover = function() {mouseOverEOT()};
-document.getElementById("EOT").onmouseout = function() {mouseOutEOT()};
+document.getElementById("EOT").onmouseover = function() {
+  mouseOverEOT();
+};
+document.getElementById("EOT").onmouseout = function() {
+  mouseOutEOT();
+};
 
 function mouseOverEOT() {
-  document.getElementById("EOT").src="https://s3.amazonaws.com/portfoliowebsite/EOT/EOT+Cutting.gif";
+  document.getElementById("EOT").src =
+    "https://s3.amazonaws.com/portfoliowebsite/EOT/EOT+Cutting.gif";
 }
 
 function mouseOutEOT() {
-  document.getElementById("EOT").src="https://s3.amazonaws.com/portfoliowebsite/EOT/EOT+Cutting+Still.jpg";
+  document.getElementById("EOT").src =
+    "https://s3.amazonaws.com/portfoliowebsite/EOT/EOT+Cutting+Still.jpg";
 }
 
-
-document.getElementById("moku").onmouseover = function() {mouseOvermoku()};
-document.getElementById("moku").onmouseout = function() {mouseOutmoku()};
+document.getElementById("moku").onmouseover = function() {
+  mouseOvermoku();
+};
+document.getElementById("moku").onmouseout = function() {
+  mouseOutmoku();
+};
 
 function mouseOvermoku() {
-  document.getElementById("moku").src="https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+132.gif";
+  document.getElementById("moku").src =
+    "https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+132.gif";
 }
 
 function mouseOutmoku() {
-  document.getElementById("moku").src="https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+Full+Static.JPG";
-}	
+  document.getElementById("moku").src =
+    "https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+Full+Static.JPG";
+}
 
-document.getElementById("nelson").onmouseover = function() {mouseOvernelson()};
-document.getElementById("nelson").onmouseout = function() {mouseOutnelson()};
+document.getElementById("nelson").onmouseover = function() {
+  mouseOvernelson();
+};
+document.getElementById("nelson").onmouseout = function() {
+  mouseOutnelson();
+};
 
 function mouseOvernelson() {
-  document.getElementById("nelson").src="https://s3.amazonaws.com/portfoliowebsite/Nelson+Bench/Nelson+Machining.gif";
+  document.getElementById("nelson").src =
+    "https://s3.amazonaws.com/portfoliowebsite/Nelson+Bench/Nelson+Machining.gif";
 }
 
 function mouseOutnelson() {
-  document.getElementById("nelson").src="https://s3.amazonaws.com/portfoliowebsite/Nelson+Bench/Nelson+Machining+Static.jpg";
-}	
+  document.getElementById("nelson").src =
+    "https://s3.amazonaws.com/portfoliowebsite/Nelson+Bench/Nelson+Machining+Static.jpg";
+}
 
-document.getElementById("pszzp").onmouseover = function() {mouseOverpszzp()};
-document.getElementById("pszzp").onmouseout = function() {mouseOutpszzp()};
+document.getElementById("pszzp").onmouseover = function() {
+  mouseOverpszzp();
+};
+document.getElementById("pszzp").onmouseout = function() {
+  mouseOutpszzp();
+};
 
 function mouseOverpszzp() {
-  document.getElementById("psszp").src="https://s3.amazonaws.com/portfoliowebsite/PSZZP/PSZZP+FZZP.gif";
+  document.getElementById("psszp").src =
+    "https://s3.amazonaws.com/portfoliowebsite/PSZZP/PSZZP+FZZP.gif";
 }
 
 function mouseOutpszzp() {
-  document.getElementById("pszzp").src="https://s3.amazonaws.com/portfoliowebsite/PSZZP/PSZZP+FZZP+Static.jpg";
+  document.getElementById("psszp").src =
+    "https://s3.amazonaws.com/portfoliowebsite/PSZZP/PSZZP+FZZP.gif";
 }
+
+//-----------------------onclicks------------------------------------------------------------
+var closebutton = document.getElementById("closebutton");
+var myModal = document.getElementById("myModal");
+var filter = document.getElementById("filter");
+var tiles = document.getElementsByClassName("tile");
+var images = document.getElementsByClassName("thumbnail");
+var thumbSubs = document.getElementsByClassName("thumbnailSubText");
+var projectTitle = document.getElementById("projectTitle");
+var projectDescription = document.getElementById("projectDescription");
+var projectImage = document.getElementById("projectImage");
+
+//Stores all of our tile's image widths which are generated by auto and applies those to each figcaption so that they can be used to generate ellipsis
+for (var i = 0; i < images.length; i++) {
+  var tileWidth = images[i].clientWidth - 10;
+  thumbSubs[i].style.width = tileWidth + "px";
+}
+
+//Calls the revert function if the escape key is pressed
+document.onkeydown = function(evt) {
+  evt = evt || window.event;
+  if (evt.keyCode == 27) {
+    revert();
+  }
+};
+
+//This function displays our modal and changes the tile layout to appear to the right of the modal and unifies tiles dimensions in a column.
+var showModal = function() {
+  for (var i = 0; i < images.length; i++) {
+    var tileWidth = images[i].clientWidth - 10;
+    images[i].style.width = 250 + "px";
+    images[i].style.height = "auto";
+    tiles[i].style.height = "auto";
+  }
+
+  for (var i = 0; i < images.length; i++) {
+    var tileWidth = images[i].clientWidth - 10;
+    thumbSubs[i].style.width = tileWidth + "px";
+  }
+
+  document.getElementById("tiles").style.width = "300px";
+
+  document.getElementById("tiles").style.paddingLeft = "850px";
+  myModal.style.display = "block";
+
+// Grab all of the info from the selected tile to populate our modal  
+  var modalHeader = this.children[1].children[0].innerHTML;
+  projectTitle.innerHTML = modalHeader;
+
+  var modalBody = this.children[1].children[1].innerHTML;
+  projectDescription.innerHTML = modalBody;
+  
+  var modalImage = this.children[0];
+  projectImage.src = modalImage.src;
+};
+
+
+for (var i = 0; i < tiles.length; i++) {
+  tiles[i].addEventListener("click", showModal, false);
+}
+
+//Here we need a funtion to revert back all of the changes we made to our tiles in order to display them as they load initially
+var revert = function() {
+  
+  document.getElementById("tiles").style.width = "auto";
+  document.getElementById("tiles").style.paddingLeft = "0px";
+  myModal.style.display = "none";
+
+  for (var i = 0; i < images.length; i++) {
+    images[i].style.width = "auto";
+    images[i].style.height = "187px";
+    tiles[i].style.height = "250px";
+  }
+
+  for (var i = 0; i < images.length; i++) {
+    var tileWidth = images[i].clientWidth - 10;
+    thumbSubs[i].style.width = tileWidth + "px";
+  }
+  document.getElementById("tiles").style.width = "auto";
+};
+
+closebutton.onclick = function() {
+  revert();
+};
