@@ -1,3 +1,2 @@
 # Portfolio Website
-This project is a part of the Founder and Coders Application: https://foundersandcoders.com/apply/prerequisites/
-Objective: create a 1 page website without the use of frameworks such as bootstrap or jquery
+This portfolio page was built from scratch, using HTML, CSS, and vanilla Javascript, as a part of freeCodeCamp's front end development exercises.

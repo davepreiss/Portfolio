@@ -46,6 +46,19 @@ H1 {
   text-overflow: ellipsis;
   border-radius: 5px;
 }
+.imageInline {
+  display: block;
+  height: auto;
+  width: 600px;
+  padding-left: 50px;
+}
+h4 {
+  margin-top: 0px; 
+    margin-bottom: 20px; 
+  width: 100%;
+   display: inline-block;
+   text-align: center;
+}
 .thumbnailTitle {
   font-family: 'Baloo Bhaina', bold;
   font-size: 16px;
@@ -118,7 +131,7 @@ display: inline;
 #myModal {
   display: none;
   float: left;
-  width: 840px;
+  width: 740px;
   height: auto;
   border: 6px #fff solid;
   background: #F5F5F5;
@@ -143,11 +156,11 @@ display: inline;
   padding-left: 22px;
   padding-bottom: 8px;
   font-family: 'Open Sans';
-  width: 780px;
+  width: 680px;
 }
 
 #projectImage {
-    width: 800px;
+    width: 700px;
     height: auto;
     padding-left: 20px;
     padding-right: 20px;
