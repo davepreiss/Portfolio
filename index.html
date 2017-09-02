@@ -19,7 +19,7 @@
     <div class="sidebarLinks">
       <a>davepreiss@gmail.com</a>
       <a href="https://github.com/davepreiss" target="_blank"> GitHub <br></a>
-      <a> <br>I am a mechanical engineer living in Durham, NC. My interests are in product development, digital fabrication, and DIY projects of all kinds!</a>
+      <a> <br>I am a mechanical engineer living in Durham, NC. My interests are in product development, automation, and DIY projects of all kinds.</a>
     </div>
   </div>
 
@@ -47,8 +47,8 @@
       <div class="tile professional all moku">
         <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+Full+Static.JPG" id="moku">
         <div class="thumbnailTitle">
-          <figcaption>Turnkey Manufacturing</figcaption>
-          <figcaption class="thumbnailSubText">Development of turnkey manufacturing workflows, including for a hardwood sunglasses manufacturer with an estimated production of 950 sunglasses/year per tool. This project was a part of an ongoing effort by the client to bring production in-house, where the sunglasses were previously manufactured overseas.
+          <figcaption>Build To Order Manufacturing</figcaption>
+          <figcaption class="thumbnailSubText">Development of a manufacturing workflow for a hardwood sunglasses manufacturer with an estimated production of 950 sunglasses/year per tool. This project was a part of an ongoing effort by the client to bring production in-house, where the sunglasses were previously manufactured overseas.
             <div class="modalOnly">
               <p>
 Each part included 5 tool changes and moved through 3 setups to achieve a total machining time of under 2 hours, while minimizing post-production through slot milling for the frames, machining for all hinge mounting hardware, and using extremely tight finishing stepovers. All workholding, part location, and tool changes were integrated directly into the machining process through a series of prompt-driven macros, allowing the parts to be manufactured by any shop employee.
@@ -92,7 +92,7 @@ Each part included 5 tool changes and moved through 3 setups to achieve a total 
           <figcaption>Parametric Furniture</figcaption>
           <figcaption class="thumbnailSubText">New members of ShopBot’s engineering team are allotted a time and material budget to build their own desks to encourage familiarity with digital fabrication techniques.
             <div class="modalOnly">
-              <p>The animation above shows parameter changes including desk width, depth, and leg height, which could be used to change the design's function from a work desk to a console table. These parameters are currently unbounded. The desk can be disassembled and flat packed into 5 pieces, and assembles using mortice and tenon joinery (requiring no fasteners or adhesives) in about 2 minutes.
+              <p>The desk was designed parametrically, meaning that its model was constrained by a series of variables which allow for rapid design changes. The animation above shows parameter changes including desk width, depth, and leg height, which could be used to change the desk's function from a work desk to a console table. These parameters are currently unbounded. The desk can be disassembled and flat packed into 5 pieces, and assembles using mortice and tenon joinery (requiring no fasteners or adhesives) in about 2 minutes.
 <br />
 <blockquote><i>The files for this project are open source and fully parametric, meaning that variables such as material thickness, height and width can all be changed dynamically, without having to directly edit the 3D model or update the machining operation. In some cases the layout of the final flat pattern must adjusted. Feel free to get in touch if you are interested in working with these models or have any questions!</i></blockquote>
 Models including all necessary CAD and CAM for this project can be found <a href="http://a360.co/2xe5pti">here</a>.
@@ -147,7 +147,7 @@ I used a prototype of the redesigned tray in a custom modular CNC controller tha
         <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Manual+%2B2/Manual+Complete.jpg" id="rotary">
         <div class="thumbnailTitle">
           <figcaption>Handibot Rotary Axes</figcaption>
-          <figcaption class="thumbnailSubText">The Handibot is an Open Source portable CNC tool that allows users to bring the capabilities of a digital fabrication directly to their job sight in a compact and robust package. I designed and released the <a href="https://handi-dev.myshopify.com/products/handibot-manual-2-axis?variant=37483025998">Manual +2 Axis Accessory</a> over a 3 month internship at ShopBot Tools. After being proposed to design and build a series of rotary motorized and manual accessories for the HandiBot, my final design incorporated both a manual indexer and 5th axis into one modular accessory.
+          <figcaption class="thumbnailSubText">The Handibot is an Open Source portable CNC tool that allows users to bring the capabilities of a digital fabrication directly to their job sight in a compact and robust package. I led the design and release of the <a href="https://handi-dev.myshopify.com/products/handibot-manual-2-axis?variant=37483025998">Manual +2 Axis Accessory</a> over a 3 month internship at ShopBot Tools. The final design incorporated both a manual indexer and 5th axis into one modular accessory geared towards education and the maker community.
             <div class="modalOnly">              
               <p>
                            <br />    <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Manual+%2B2/Manual+Fish.jpg">   
@@ -188,7 +188,7 @@ Models including all necessary CAD and CAM for this project can be found <a href
         <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/PSZZP/PSZZP+FZZP.gif" id="pszzp">
         <div class="thumbnailTitle">
           <figcaption>Pressure Sensetive Z-Zero Plate</figcaption>
-          <figcaption class="thumbnailSubText">I designed the pressure sensitive z-zero plate after building a custom z-zero plate for personal use that replaced the alligator clip associated with many CNC router z-zero plates with steel wool (and eventually carbon fiber brushes). The brushes were used to carry the electrical ground used to detect bit-contact. The collet or shaft of the bit would contact the brush during a z-plunge, while the tip of the bit would contact a machined aluminum surface carrying the z-zero plate input. The distance from that machined surface to the material or tool surface could then be used to establish cutter length between tool changes.
+          <figcaption class="thumbnailSubText">I designed the pressure sensitive z-zero plate after building a custom z-zero plate that replaced the alligator clip associated with many CNC router z-zero plates with steel wool (and eventually carbon fiber brushes). The collet or shaft of the bit would contact the brush (carrying ground) during a z-plunge, while the tip of the bit would contact a machined aluminum surface carrying the z-zero plate input. The distance from that machined surface to the material or tool surface could then be used to establish cutter length between tool changes.
             <div class="modalOnly">
               <p>
 Design constraints for the final product were that it be backwards compatible with all existing ShopBots, repeatable to within +/- 0.001” of an inch, and be able to used to zero directly to the surface of material to be machined, as well as mounted in a fixed location to zero to table surface.
@@ -248,17 +248,19 @@ Future goals for this project are to develop a complete Fusion-360 add-in, and e
           <figcaption class="thumbnailSubText">Redesign of the ShopBot’s Gantry beams, YZ car, Z-axis, and associated accessores. Working with a team of 6 engineers, my primary tasks for this project were the redesign of the tool’s Automatic Tool Change System, Dust Foot, and 5-Axis specific changes.
             <div class="modalOnly">
               <p>
-                <h2>Automatic Tool Changer </h2>
-An ATC, or Automatic Tool Change System, is used by a CNC tool to eliminate the manual steps in a tool change, allowing for rapid production times. I designed and sourced a pneumatic system for the tool release, positive pressure, and cylinder with precission regulator to balance the weight of the tool’s z-axis. Additionally it included an in-house manufactured tool clip and a novel toolbar layout that drastically reduced cost by eliinating an actuated dust skirt necessary for the ATC. 
+                </br>  
+                <h2>Automatic Tool Changer Redesign</h2>
+An ATC, or Automatic Tool Change System, is used by a CNC tool to eliminate the manual steps in a tool change, allowing for rapid production times. I designed and sourced a pneumatic system for the tool release, positive pressure, and cylinder with precission regulator to balance the weight of the tool’s z-axis. This included an in-house manufactured tool clip for accepting tool holders when not in use, and a novel toolbar layout that drastically reduced cost by eliinating a pneumatically actuated dust skirt previously necessary for the ATC. 
               </br></br> <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/THK/THK+Beam+Pneumatics.jpg" id="FEA">
-              
-<h2>Dust Feet </h2>
-I led the redesign and manufacturing worflow for a series of dust feet compatable with each of ShopBot’s 5 cutting tools. The redesign was backwards compatable and utilized shared non-fabricated parts for all iterations of the dust foot. The dust feet drastically reduced cost and inceased ease of use by eliminating powdercoated sheet metal parts, maximizing sheet yield, and adding a magnetically removable shroud.
+          </br>    
+<h2>Dust Shoe Redesign </h2>
+I led the redesign and manufacturing worflow for a series of dust shoes compatable with each of ShopBot’s 5 cutting tools. The redesign was backwards compatable and utilized shared non-fabricated parts for all iterations of the dust shoe. The redesign drastically reduced cost by eliminating powdercoated sheet metal parts, maximizing sheet yield, and adding a magnetically removable shroud for ease of use.
 <br /> <br />
               
               <img class="imageInline" alt="#" style="width:500px;padding-left:100px" src="https://s3.amazonaws.com/portfoliowebsite/THK/THK+Dust+Foot" id="FEA">
-<h2>5-Axis</h2>
-I led the testing and redesign of ShopBot’s 5-Axis tool. I built the first prototype using the new beam design and made all necessary as-built changes to the tool, and then implimented those changes into the engineering master and manufacturing process. This included a new Z-axis cable carrier, proximity switch mounting and their associated macros, cable lengths and management, and many others.
+</br>  
+<h2>5-Axis Redesign</h2>
+I led the testing and handled redesign specific changes for ShopBot’s 5-Axis tool. I built the first prototype using the new beam design and made as-built changes to the tool, then implimented those changes into the engineering master and manufacturing process. This included a new Z-axis cable carrier, proximity switch mounting and their associated macros, cable lengths and management.
               <br /> <br />
                 <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/THK/THK+5axis" id="THK5axis">
 </p>
@@ -271,7 +273,7 @@ I led the testing and redesign of ShopBot’s 5-Axis tool. I built the first pro
                 <div class="tile personal all">
         <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Pelican+Case/Pelican+Case+Open.jpg" id="Pelican">
         <div class="thumbnailTitle">
-          <figcaption>Lean Tool Case</figcaption>
+          <figcaption>Pelican Tool Case</figcaption>
           <figcaption class="thumbnailSubText">Following lean manufacturing principles, I built a tool case around the Pelican 1510 carry-on, using custom machined polyethylene foam inserts backed by plywood. The kit has come with me to Mongolia, China, Dubai, Hawaii, and many other job sites in the continental US. When not on the road, the foam inserts of the case can be removed and placed above my workbench, which keeps everything accessible. 
             <div class="modalOnly">
               <p>
@@ -313,7 +315,7 @@ I led the testing and redesign of ShopBot’s 5-Axis tool. I built the first pro
         <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Home+Automation/Curtains+Fusion.jpg" id="QTC">
         <div class="thumbnailTitle">
           <figcaption>IOT Home Automation</figcaption>
-          <figcaption class="thumbnailSubText">I am continuously working on a home automation system built around amazon's Alexa AI. It is currently capable of opening and closing my curtains using voice commands. I designed and built the IOT’d curtain using an arduino, 5V servo, and a pair of limit switches. After the initial prototype, I added web functionality using the Particle Photon and linked it to an Amazon Dot using IFTT. Videos to come!
+          <figcaption class="thumbnailSubText">I am continuously working on a home automation system built around Amazon's Alexa AI. It is currently capable of opening and closing a set of curtains using voice commands. I designed and built the IOT’d curtain using an arduino, 5V servo, and a pair of limit switches (the curtains are timing belt driven). After the initial prototype, I added web functionality using the Particle Photon and linked it to an Amazon Dot using IFTT. Videos to come!
             <div class="modalOnly">
               <p>
                The final design can be linked directly to my alarm, or activated discreetly by voice. The entire mechanism can be unmounted from the wall and used for  non-precise linear motion applications such as as a camera dolly.
@@ -324,7 +326,7 @@ I led the testing and redesign of ShopBot’s 5-Axis tool. I built the first pro
       </div>
     
     <div class="tile professional all">
-        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Personal+CNC/File_008.jpeg" id="QTC">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Personal+CNC/Scrap+CNC+Still.jpg" id="QTC">
         <div class="thumbnailTitle">
           <figcaption>Scrap CNC</figcaption>
           <figcaption class="thumbnailSubText">Scrap CNC is a 3-axis CNC tool that I built over the course of 4 months and 2 years of collecting material from the scrap bin. The final machine is constructed primarily from aluminum extrusion and uses 15mm profile linear rails, 4 NEMA 23 stepper driven lead screws, and a 1 HP HSD Spindle. The tool can be disassembled into 3 components and carried easily by 1 person. Total travel is 24.5 x 19.5 x 8.
@@ -341,7 +343,7 @@ This project is completely open source and you can check out the design on Fusio
         
     </div>
   </div>
-</div>  
+</div>
    <script src="index.js"></script>
 
 </body>
