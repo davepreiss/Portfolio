@@ -61,6 +61,7 @@ var projectFirstLine = document.getElementById("projectFirstLine");
 
 //Ive added the hideCaptions and showCaptions functions below after there seemed to be a timing issue with capturing and setting tile width. Some tiles would be properly ellipsed and others not, whereas now they are all hidden until their proper width can be found and set.
 
+window.onload = function(e){ 
 function hideCaptions() {
   var captions = document.getElementsByClassName("thumbnailSubText");
   for (var i = 0; i < captions.length; i++) {
@@ -83,6 +84,7 @@ for (var i = 0; i < images.length; i++) {
 }
 
 showCaptions();
+}
 
 //Calls the revert function if the escape key is pressed
 document.onkeydown = function(evt) {
