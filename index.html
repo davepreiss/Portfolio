@@ -110,6 +110,7 @@ Models including all necessary CAD and CAM for this project can be found <a href
               <p>
                 <h2>Automatic Tool Changer Redesign</h2>
 An ATC, or Automatic Tool Change System, is used by a CNC tool to eliminate the manual steps in a tool change, allowing for rapid production times. I designed and sourced a pneumatics system in collaboration with our vendors for the tool release, positive pressure, and cylinder with precission regulator to balance the weight of the tool’s z-axis. This included an in-house manufactured tool clip (The FEA for this part is shown in the thumbnail) for accepting tool holders when not in use, and changes to the toolbar's design that drastically reduced cost by eliinating a pneumatically actuated dust skirt previously necessary for the ATC. 
+              </br></br> <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/THK/ATC+Pneumatics.jpg" id="FEA">
               </br></br> <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/THK/THK+Beam+Pneumatics.jpg" id="FEA">
           </br>    
 <h2>Dust Shoe Redesign </h2>
@@ -148,6 +149,24 @@ In the summer of 2017 I cut a pair of volumes and after assembling and finishing
 Models for this project can be found <a href="http://a360.co/2g5YVIO">here</a>, and if you are interested in cutting some volumes of your own/parametric modeling in Fusion 360 in general, or app development with the API feel free to get in touch via email!
 <br /> <br />
 Future goals for this project are to develop a complete Fusion-360 add-in, and eventually a web interface where customers can generate custom volumes of their own in real time.
+</p>
+            </div>
+          </figcaption>
+        </div>
+      </div>
+
+    <div class="tile personal all">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Ebike/Ebike+rear.jpg" id="ebike">
+        <div class="thumbnailTitle">
+          <figcaption>eBike Conversion</figcaption>
+          <figcaption class="thumbnailSubText">This project started after acquiring a motor from a friend who used to work in the EV industry.  The motor is an original Turnigy 80-100 130kV outrunner BLDC that has a following on forums like endless sphere, despite being discontinued in 2011. It is being run at 36V nominal using 5 <a href="https://www.ebay.com/itm/BALANCING-SCOOTER-LG-36V-4-4AH-LITHIUM-ION-REPLACEMENT-BATTERY-PACK-6-5-8-10-/172648854096">Alarm Hookup</a> Samsung 18650 packs, each with a 4.4 AH capacity for a total of 22 AHs (or a range of about 53 miles at 20 mph on flat land).
+            <div class="modalOnly">
+              <p>
+The motor is controlled with a <a href="http://vedder.se/2015/01/vesc-open-source-esc/">VESC</a>, which is a neat open-source speed controller originally designed for DIY electric skateboards. VESC's can push up to 50A continuous at 60V which is significantly more power than I need (I am pulling about 26A at 30 mph which is about as fast as I feel comfortable on a bike). The VESC also has a 5V BEC and is capable of reading resistive or hall effect throttles, which would otherwise have to be overcome with an arduino or servo-tester circuit. VESCs are also capable of some neat functions including regenerative braking and FOC control which I am looking forward to experimenting more with.
+</br></br>
+The motor is mounted between the seat stays and seat tube and is geared down to the rear wheel with a 2-stage HTD 5mm timing belt reduction of about 10.6:1. The large plywood rear pulley is located concentrically with the hub of the rear wheel and zip tied to the spokes of the wheel (so far it has held up well!). Over the course of working on this project I moved to New York City and had to leave behind the original bike the project was intended for (a vintage steel frame Peugeot road bike), but was able to adapt it to a new bike in New York with some minor machining. My original design had a roller bearing idler which mounted to one of the seat-stays, but the new bike was slightly larger and allowed for 1050 mm rear timing belt to be tensioned at the motor mounting bracket.
+</br></br>
+The CAD and CAM for this project are hosted <a href="http://a360.co/2CH2V8A">here</a>. If you have any questions about the build don't hesitate to get in touch!
 </p>
             </div>
           </figcaption>
@@ -380,7 +399,3 @@ The plate is currently sold as an accessory and has been incorporated directly i
     </div>
   </div>
 </div>
-   <script src="index.js"></script>
-
-</body>
-</html>
