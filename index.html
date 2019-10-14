@@ -83,6 +83,36 @@
         </div>
       </div>
 
+      <div class="tile personal all CVDAQ">
+        <img class="thumbnail" alt="#" src="https://portfoliowebsite.s3.amazonaws.com/CVDAQ/CVDAQGIF.gif" id="CVDAQ">
+        <div class="thumbnailTitle">
+          <figcaption>CVDAQ</figcaption>
+          <figcaption class="thumbnailSubText">CVDAQ is a computer vision data acquisition tool that allows users to film static sensors with visible DROs while using computer vision and optical character recognition to log data to a .csv file. <a href=" https://youtu.be/S21aSRrQoiY">You can see a video of it running here.</a> While working on a personal project that involved plotting force vs. displacement of a linear stage, I found myself spending hours manually logging values from a dial indicator and force gauge to a spreadsheet. I found it was easiest to film the setup, move the stage continuously, then return and log all of the data from the video while playing it slowly. The next logical step was to automate the character recognition.            
+            <div class="modalOnly">
+              <p>The final script is written in python, and uses a lot of openCV and PyTesseract for the OCR. It works by letting a user upload a video of their test setup, grabbing the first frame, and then asking for rectangles to be drawn around individual regions of interest within a sensor's DRO. The script then iterates through every frame of the video looking within each user generated rectangle. Tesseract also provides a confidence score to each guess, so that gets added as well. This method relies on the camera and sensor being relatively static throughout the test.
+              <br /><br />
+              Most smartphone cameras shoot at 60 fps, so even if you are rejecting 50% of frames you are still getting 30 fps of data, which is excessive for most of the tests that I run. Unfortunately depending on the DRO, you do wind up with a lot of distorted frames where the DRO was flickering between values. 7 segment displays are one of the better options here. Some of the benefits of data acquisition this way are:
+              <ul>
+                <li>You have video evidence of every test to go back and look for outliers.</li>
+                <li>All of your sensors become perfectly synced, so no worrying about stitching data together from different datetime formats or out of sync data.</li>
+                <li>You don't need to know how to program to automate data collection from your sensors (ideal for folks in the sciences who don't have hardware data collection chops)</li>
+                <li>Ability to incorporate intangible visual data into a test alongside a sensor. </li>
+              </ul>
+              <br />
+              There are still a ton of features to add to the project:
+              <ul>
+                <li>Motion tracking for the digits of interest to support a moving setup.</li>.</li>
+                <li>An option to select a pixel or area of pixels and plot their color alongside data from other sensors. (useful for LED's that light up on a PCB when a sensor is triggered)</li>
+                <li>An option to select analog dial sensors (such as a test indicator or pressure gauge)</li>
+              </ul>
+              <br />
+              Ultimately I'd like to host the script on a web page such that users can just film their test setup, upload it, and download a .csv of their data. A fun final application for the project would be a closed loop motion control system where a motor is servo'd through a dial indicator being monitored by a camera. In fact you could sort of turn anything into a closed loop system this way. Perhaps someday it will be possible to tape a couple of sensors and actuators on any home appliance or lab equipment, and start optimizing/automating things.              
+            </p>
+            </div>
+          </figcaption>
+        </div>
+      </div>
+
       <div class="tile personal all Kinematics">
         <img class="thumbnail" alt="#" src="https://portfoliowebsite.s3.amazonaws.com/miscKinematics/5barlanky.gif" id="LMGVise">
         <div class="thumbnailTitle">
