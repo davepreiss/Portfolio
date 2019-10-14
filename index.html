@@ -19,7 +19,7 @@
     <div class="sidebarLinks">
       <a>davepreiss@gmail.com</a>
       <a href="https://github.com/davepreiss" target="_blank"> GitHub <br></a>
-      <a> <br>I am a mechanical engineer living in Boston, MA. I am interested in early stage prototyping and R&D projects that span mechanical / electrical / software problem solving.</a>
+      <a> <br>I am a mechanical engineer living in Boston, MA. I am interested in early stage prototyping and R&D projects that involve mechanical / electrical / software engineering.</a>
     </div>
   </div>
 
@@ -59,13 +59,11 @@
               <h4><br /> An early scan from when I was still smoothing out some of the trig issues.</h4>
               <br />
               This project was my first time using matplotlib's animation features (which is really just iteratively plotting then clearing over a given time interval). It made the move from plotting a single array of points to actually animating it in real time pretty straightforward. There are 3 scripts:
-              <br /><br />
-              twoBarMetrologyCSVGenerator - Creates and populates a .csv of Time, Angle1, Angle2, Deflection
-              <br />
-              twoBarMetrologyCollection - Converts .csv to cartesian coordinates and heatmaps.
-              <br />
-              twoBarMetrology_CurveFitting - Plots points in 3D and fits a plane to the surface using least squares. Also plots a histogram of point to plane distances and outputs surface flatness, parallelism, and angle.
-              <br /><br />
+              <ul>
+                <li>twoBarMetrologyCSVGenerator - Creates and populates a .csv of Time, Angle1, Angle2, Deflection.</li>
+                <li>twoBarMetrologyCollection - Converts .csv to cartesian coordinates and heatmaps.</li>
+                <li>twoBarMetrology_CurveFitting - Plots points in 3D and fits a plane to the surface using least squares. Also plots a histogram of point to plane distances and outputs surface flatness, parallelism, and angle.</li>
+              </ul>              
               <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/2bar/2barthumbnail.jpg">
               <h4><br /> twoBarMetrologyCollection generates a heatmap of surface height while dynamically updating max and min heights + linkage position (the two lines in gold) in real time.</h4>
               <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/2bar/2barhistogram.jpg">
@@ -98,14 +96,12 @@
                 <li>You don't need to know how to program to automate data collection from your sensors (ideal for folks in the sciences who don't have hardware data collection chops)</li>
                 <li>Ability to incorporate intangible visual data into a test alongside a sensor. </li>
               </ul>
-              <br />
               There are still a ton of features to add to the project:
               <ul>
-                <li>Motion tracking for the digits of interest to support a moving setup.</li>.</li>
+                <li>Motion tracking for the digits of interest to support a moving setup.</li>
                 <li>An option to select a pixel or area of pixels and plot their color alongside data from other sensors. (useful for LED's that light up on a PCB when a sensor is triggered)</li>
                 <li>An option to select analog dial sensors (such as a test indicator or pressure gauge)</li>
               </ul>
-              <br />
               Ultimately I'd like to host the script on a web page such that users can just film their test setup, upload it, and download a .csv of their data. A fun final application for the project would be a closed loop motion control system where a motor is servo'd through a dial indicator being monitored by a camera. In fact you could sort of turn anything into a closed loop system this way. Perhaps someday it will be possible to tape a couple of sensors and actuators on any home appliance or lab equipment, and start optimizing/automating things.              
             </p>
             </div>
