@@ -251,21 +251,41 @@
         </div>
       </div>
 
-      <div class="tile personal all desk">
-        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Cycle.gif" id="desk">
+      <div class="tile personal all">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Personal+CNC/Scrap+CNC+Still.jpg" id="QTC">
         <div class="thumbnailTitle">
-          <figcaption>Parametric Furniture</figcaption>
-          <figcaption class="thumbnailSubText">To encourage familiarity with digital fabrication, new members of ShopBot’s engineering team are allotted a time and material budget to build their own desks.
+          <figcaption>Scrap CNC</figcaption>
+          <figcaption class="thumbnailSubText">Scrap CNC is a 3-axis CNC tool that I built over the course of 4 months and 2 years of collecting scrap materials. The final machine is constructed primarily from aluminum extrusion and uses 15mm profile linear rails, 4 NEMA 23 stepper driven lead screws, and a 1 HP HSD Spindle. The tool can be disassembled into 3 components and carried easily by 1 person. Total travel is 24.5 x 19.5 x 8.
             <div class="modalOnly">
-              <p>The desk shown above was designed parametrically, meaning that its model was constrained by a series of variables which allow for rapid design changes. The animation above shows parameter changes including desk width, depth, and leg height, which could be used to change the desk's function from a work desk to a console table. The desk can be disassembled and flat packed into 5 pieces, and assembles using mortice and tenon joinery (requiring no fasteners or adhesives) in about 2 minutes.
-              <br />
-              <blockquote><i>The files for this project are open source and fully parametric, meaning that variables such as material thickness, height and width can all be changed dynamically, without having to directly edit the 3D model or update the machining operation. In some cases the layout of the final flat pattern must adjusted. Feel free to get in touch if you are interested in working with these models or have any questions!</i></blockquote>
-              Models including all necessary CAD and CAM for this project can be found <a href="http://a360.co/2xe5pti">here</a>.
-              <br />
-              <br />   
-              <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Assembled.jpg">   
-              <h4><br /> The desk configured as a work table, shown assembled immediately after manufacturing using only a chisel for tab removal and mallet for assembly.</h4>
-              <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Profile2.jpg">   
+              <p>
+                <a href="https://www.youtube.com/watch?v=SaLJOsxTbcE">You can see some early video of it cutting here,</a> (ignore the cardboard chip containment). Future plans for this tool are to replace a few remaining phenolic parts with aluminum, a low RPM spindle, rotary axis, and eventually film a machine overview.
+              <br /> <br />
+              <img class="imageInline" alt="#" src="https://portfoliowebsite.s3.amazonaws.com/Personal+CNC/scrapcncHANGBOARD.jpg">   
+              <h4>A hangboard I machined from eucalyptus</h4>
+              <br /> <br />
+              This project is completely open source and you can check out the design on Fusion 360 <a href="http://a360.co/2vmS58B">here</a>. Feel free to get in touch if you are building a tool of your own or have any questions!
+              </p>
+            </div>
+          </figcaption>
+        </div>
+      </div>
+
+      <div class="tile personal all">
+        <img class="thumbnail" alt="#" src="https://portfoliowebsite.s3.amazonaws.com/Ebike/ebikebattery.jpg" id="ebike">
+        <div class="thumbnailTitle">
+          <figcaption>eBike Build</figcaption>
+          <figcaption class="thumbnailSubText">This project started after getting an original Turnigy 80-100 130kV outrunner BLDC from a friend who previously worked for an EV startup. The motor has a following on forums like endless sphere, despite being discontinued in 2011. It is being run at 36V nominal using 5 <a href="https://www.ebay.com/itm/BALANCING-SCOOTER-LG-36V-4-4AH-LITHIUM-ION-REPLACEMENT-BATTERY-PACK-6-5-8-10-/172648854096">Alarm Hookup</a> Samsung 18650 packs, each with a 4.4 AH capacity for a total of 22 AHs (or a range of about 53 miles at 20 mph on flat land).
+            <div class="modalOnly">
+              <p>
+              The motor is controlled with a <a href="http://vedder.se/2015/01/vesc-open-source-esc/">VESC</a>, which is a neat open-source speed controller originally designed for DIY electric skateboards. VESC's can push up to 50A continuous at 60V which is significantly more power than I need (I am pulling about 26A at 30 mph which is about as fast as I feel comfortable on a bike). The VESC also has a 5V BEC and is capable of reading resistive or hall effect throttles, which would otherwise have to be overcome with an arduino or servo-tester circuit. VESCs are also capable of some neat functions including regenerative braking and FOC control which I am looking forward to experimenting more with. I built the battery pack into a pelican case and wired in some schottky diodes for backcurrent protection, as well as a solid state relay (the glowing blue external power button). The battery pack is actually completely waterproof at the expense of poor cooling.
+              </br></br>
+              The motor is mounted between the seat stays and seat tube and is geared down to the rear wheel with a 2-stage HTD 5mm timing belt reduction of about 10.6:1. I started with a large plywood rear pulley located concentrically with the hub of the rear wheel and zip tied to the spokes of the wheel. I foolishly thought it would be fun to design a freewheel and build it from scratch which you can see a picture of below. I designed and machined/printed all of the parts in the freewheel aside from the bearing. The pawls are machined from 5160 spring steel, but the ratchet I never got around to waterjetting it in something that wasn't aluminum (note the aluminum shavings in the mounted picture below). The freewheel worked for about 2 weeks of daily commuting and then jammed and failed catastrophically when the acrylic pawl retention cover cracked. Since then I haven't had the heart to return to the project, but will eventually replace the custom freewheel with an OTS one mounted to the hub and a waterjet sprocket.
+              </br></br>
+              <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/Ebike/ebikefreewheel1.jpg">   
+              <h4>A custom freewheel I made for motor to rear hub transmission.</h4>  
+              <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/Ebike/ebikeHMroof.gif">   
+            </br>
+              <h4>Somehow this is the only video I have of the bike actually running - pre freewheel and final battery pack. </h4>  
               </p>
             </div>
           </figcaption>
@@ -285,25 +305,6 @@
                <h4>3-Axis slot milling toolpath used for lense grooves.</h4>
               <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+hinge+machining.jpg">   
               <h4></br>Locating jig for final hinge-hardware machining. Toggle clamps were used to locate and hold-down temple arms in their negatives. </h4>
-              </p>
-            </div>
-          </figcaption>
-        </div>
-      </div>
-
-      <div class="tile personal all">
-        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Personal+CNC/Scrap+CNC+Still.jpg" id="QTC">
-        <div class="thumbnailTitle">
-          <figcaption>Scrap CNC</figcaption>
-          <figcaption class="thumbnailSubText">Scrap CNC is a 3-axis CNC tool that I built over the course of 4 months and 2 years of collecting scrap materials. The final machine is constructed primarily from aluminum extrusion and uses 15mm profile linear rails, 4 NEMA 23 stepper driven lead screws, and a 1 HP HSD Spindle. The tool can be disassembled into 3 components and carried easily by 1 person. Total travel is 24.5 x 19.5 x 8.
-            <div class="modalOnly">
-              <p>
-                <a href="https://www.youtube.com/watch?v=SaLJOsxTbcE">You can see some early video of it cutting here,</a> (ignore the cardboard chip containment). Future plans for this tool are to replace a few remaining phenolic parts with aluminum, a low RPM spindle, rotary axis, and eventually film a machine overview.
-              <br /> <br />
-              <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+Slot.gif">   
-              <h4>3-Axis slot milling toolpath used for lense grooves.</h4>
-              <br /> <br />
-              This project is completely open source and you can check out the design on Fusion 360 <a href="http://a360.co/2vmS58B">here</a>. Feel free to get in touch if you are building a tool of your own or have any questions!
               </p>
             </div>
           </figcaption>
@@ -361,28 +362,6 @@
         </div>
       </div>
 
-    <div class="tile personal all">
-        <img class="thumbnail" alt="#" src="https://portfoliowebsite.s3.amazonaws.com/Ebike/ebikebattery.jpg" id="ebike">
-        <div class="thumbnailTitle">
-          <figcaption>eBike Build</figcaption>
-          <figcaption class="thumbnailSubText">This project started after getting an original Turnigy 80-100 130kV outrunner BLDC from a friend who previously worked for an EV startup. The motor has a following on forums like endless sphere, despite being discontinued in 2011. It is being run at 36V nominal using 5 <a href="https://www.ebay.com/itm/BALANCING-SCOOTER-LG-36V-4-4AH-LITHIUM-ION-REPLACEMENT-BATTERY-PACK-6-5-8-10-/172648854096">Alarm Hookup</a> Samsung 18650 packs, each with a 4.4 AH capacity for a total of 22 AHs (or a range of about 53 miles at 20 mph on flat land).
-            <div class="modalOnly">
-              <p>
-              The motor is controlled with a <a href="http://vedder.se/2015/01/vesc-open-source-esc/">VESC</a>, which is a neat open-source speed controller originally designed for DIY electric skateboards. VESC's can push up to 50A continuous at 60V which is significantly more power than I need (I am pulling about 26A at 30 mph which is about as fast as I feel comfortable on a bike). The VESC also has a 5V BEC and is capable of reading resistive or hall effect throttles, which would otherwise have to be overcome with an arduino or servo-tester circuit. VESCs are also capable of some neat functions including regenerative braking and FOC control which I am looking forward to experimenting more with. I built the battery pack into a pelican case and wired in some schottky diodes for backcurrent protection, as well as a solid state relay (the glowing blue external power button). The battery pack is actually completely waterproof at the expense of poor cooling.
-              </br></br>
-              The motor is mounted between the seat stays and seat tube and is geared down to the rear wheel with a 2-stage HTD 5mm timing belt reduction of about 10.6:1. I started with a large plywood rear pulley located concentrically with the hub of the rear wheel and zip tied to the spokes of the wheel. I foolishly thought it would be fun to design a freewheel and build it from scratch which you can see a picture of below. I designed and machined/printed all of the parts in the freewheel aside from the bearing. The pawls are machined from 5160 spring steel, but the ratchet I never got around to waterjetting it in something that wasn't aluminum (note the aluminum shavings in the mounted picture below). The freewheel worked for about 2 weeks of daily commuting and then jammed and failed catastrophically when the acrylic pawl retention cover cracked. Since then I haven't had the heart to return to the project, but will eventually replace the custom freewheel with an OTS one mounted to the hub and a waterjet sprocket.
-              </br></br>
-              <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/Ebike/ebikefreewheel1.jpg">   
-              <h4>A custom freewheel I made for motor to rear hub transmission.</h4>  
-              <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/Ebike/ebikeHMroof.gif">   
-            </br>
-              <h4>Somehow this is the only video I have of the bike actually running - pre freewheel and final battery pack. </h4>  
-              </p>
-            </div>
-          </figcaption>
-        </div>
-      </div>
-
      <div class="tile professional all indexer">
         <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/6+in+Indexer/6+Indexer+Newel.jpg" id="indexer">
 
@@ -433,6 +412,27 @@
               The redesign allowed for an additional row of aluminum decking to be installed at the rear of the tool, such that an Automatic tool changing system, Fixed Z-Zero Plate or Indexer/other accessory could be mounted permanently to the tool without sacrificing work area, or to utilize an additional 2” of machining area. The changes have since been incorporated into ShopBot’s 24” x 18” Desktop redesign. 
               <br /> <br />
               I used a prototype of the redesigned tray in a custom modular CNC controller that I built for my personal machine, but the design can be used pretty generally for building CNC enclosures using Gecko G250X drivers and ShopBot’s Desktop control board.
+              </p>
+            </div>
+          </figcaption>
+        </div>
+      </div>
+
+      <div class="tile personal all desk">
+        <img class="thumbnail" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Cycle.gif" id="desk">
+        <div class="thumbnailTitle">
+          <figcaption>Parametric Furniture</figcaption>
+          <figcaption class="thumbnailSubText">To encourage familiarity with digital fabrication, new members of ShopBot’s engineering team are allotted a time and material budget to build their own desks.
+            <div class="modalOnly">
+              <p>The desk shown above was designed parametrically, meaning that its model was constrained by a series of variables which allow for rapid design changes. The animation above shows parameter changes including desk width, depth, and leg height, which could be used to change the desk's function from a work desk to a console table. The desk can be disassembled and flat packed into 5 pieces, and assembles using mortice and tenon joinery (requiring no fasteners or adhesives) in about 2 minutes.
+              <br />
+              <blockquote><i>The files for this project are open source and fully parametric, meaning that variables such as material thickness, height and width can all be changed dynamically, without having to directly edit the 3D model or update the machining operation. In some cases the layout of the final flat pattern must adjusted. Feel free to get in touch if you are interested in working with these models or have any questions!</i></blockquote>
+              Models including all necessary CAD and CAM for this project can be found <a href="http://a360.co/2xe5pti">here</a>.
+              <br />
+              <br />   
+              <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Assembled.jpg">   
+              <h4><br /> The desk configured as a work table, shown assembled immediately after manufacturing using only a chisel for tab removal and mallet for assembly.</h4>
+              <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Profile2.jpg">   
               </p>
             </div>
           </figcaption>
