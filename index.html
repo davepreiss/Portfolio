@@ -78,7 +78,7 @@
                   <br /><br />
                   Graphite machines decently well (despite probably doing irreparable damage to end mills). It's important to have good vacuum for respiratory reasons, but also to make sure you don't wind up with a bunch of abrasive carbon dust in your machine's ways. My workflow was to vertical bandsaw, and then face both sides of the graphite puck. I don't have any data on this but it felt important to keep thickness uniform to guarantee equal pneumatic resistance and therefore flow across the graphite. My other assumption was that the area within the plenum achieved some steady state pressure and that flow would be equal without needing significant height to the plenum to open up the flow.
                   <br /><br />
-                  <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/DIY+Air+Bearings/airbearingcomposite.jpg"> 
+                  <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/DIY+Air+Bearings/airbearingcomposite.jpg"> 
                   <br />
                   I lapped the graphite to 600 grit on a surface plate after machining. I then epoxied the plenum on over a PP film stuck to a surface plate, and allowed the resin to flow down the sides of the graphite puck, completely sealing off the edges of the puck (and creating that mechanical interference on the dovetail from earlier). I used LOCTITE® EA 0151, but don't think the epoxy matters much. After curing, I re lap the face of the graphite to bring any excess epoxy that's worked its way under the puck into plane. Porous air bearings can tolerate a good amount of exposed porous surface, so no need to be too meticulous. I was concerned with the idea of lapping both sides of the puck considering that one side would be subject to positive pressure and all of the smaller particles ground into the porous structure would effectively clog the bearing (not a problem on the bearing side where those particles would just be ejected. It takes less than a minute to lap in graphite to sub 20 micron flatness. It also helps that all of the pucks I've made are under 40 mm in diameter. It's important to frequently unclog the sand paper, especially at higher grits, otherwise you'll just ride around on a bed of graphite dust which is actually extremely lubricious. Tom Lipton has an amazing series of videos on lapping that were helpful to watch:
                   <h2>Planar Air Bearings</h2>
@@ -122,7 +122,7 @@
               <br /><br />
               Figuring out the trig was relatively straightforward, but there's a caveat which is that as soon as your second arm leaves the 180 deg interior angle of the first (and again after 270) you have to make a few small adjustments to the plotting script. This led me to a day wrangling with plots that looked like the one below. You can see all of the trig in twoBarMetrollogyCollection.py. The plotting script is currently computing the trig for every point, for every frame, because I was lazy about moving from the plotting a complete array to the real time case. I haven't run into any memory limitations yet because most of my plots have been limited to under 2ish minutes.
               <br /><br />
-              <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/2bar/2bar_mistake.jpg">
+              <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/2bar/2bar_mistake.jpg">
               <h4><br /> An early scan from when I was still smoothing out some of the trig issues.</h4>
               <br />
               This project was my first time using matplotlib's animation features (which is really just iteratively plotting then clearing over a given time interval). It made the move from plotting a single array of points to actually animating it in real time pretty straightforward. There are 3 scripts:
@@ -131,9 +131,9 @@
                 <li>twoBarMetrologyCollection - Converts .csv to cartesian coordinates and heatmaps.</li>
                 <li>twoBarMetrology_CurveFitting - Plots points in 3D and fits a plane to the surface using least squares. Also plots a histogram of point to plane distances and outputs surface flatness, parallelism, and angle.</li>
               </ul>              
-              <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/2bar/2barthumbnail.jpg">
+              <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/2bar/2barthumbnail.jpg">
               <h4><br /> twoBarMetrologyCollection generates a heatmap of surface height while dynamically updating max and min heights + linkage position (the two lines in gold) in real time.</h4>
-              <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/2bar/2barhistogram.jpg">
+              <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/2bar/2barhistogram.jpg">
               <h4><br /> twoBarMetrology_CurveFitting outputs the two plots above.</h4>
               I scanned a few objects but have yet to use the rig for anything work related. An interesting test I've used to benchmark the jig's performance is to measure the surface of a machined aluminum plate of known flatness, and then put a 6mm gauge block under one end of the same plate, keeping flatness the same, but throwing off parallelism by 6mm. If everything were functioning ideally, the script's flatness estimate should be identical for both scans. Both plots are shown in the video, which nets a flatness deviation of 130 microns (not very impressive accuracy). I am not 100% sure where the error is coming from, but suspect the moment created by the angle might be too much for the dial indicator's bushing (I was scanning upwards and should have been scanning down) and/or the Noga arm I was using also contributed.
               <br /><br />
@@ -188,7 +188,7 @@
              <br /> <br />
              What's especially clever about the Origin's design is that it achieves relatively rigid and accurate (although accuracy is variable) 2 axis motion, without the use of expensive linear motion components such as blocks/rails, belts, or ball screws. Kinematically it's similar to a SCARA, but allows for both motors to be grounded without additional transmission elements, and the added rigidity of having 2 linkages joined at the end effector. Shaper has a particularly compelling case for their implementation. There is no strict requirement to move linearly when you're autocorrecting for a human (we're pretty bad at moving linearly anyways). By limiting their travel to human autocorrect, they can ignore the resolution penalties associated with moving in arcs at 90 deg from inflection. Lastly they nest the bearings for the outer linkages within the inner linkages (see their teardown video or the GIF below of our acrylic version), which allows for a smaller footprint and higher rigidity.
              <br /> <br />
-             <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/miscKinematics/5barsmol.gif">
+             <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/miscKinematics/5barsmol.gif">
              <h4><br /> A lasercut version of the more rigid version we ultimately machined in aluminum.</h4>
              <br />
              We got  <a href="https://www.michaelfogleman.com/projects/">Michael Fogelman</a> to join the team which feels a lot like an NBA player showing up at your pickup basketball game. He figured out the forward kinematics and handled all of the non firmware level software (+ some of it) and wrote a complete motion control system in just 3 days.
@@ -200,7 +200,7 @@
              <h2>Parametric XY</h2>
              Another project I'm including here is some robust master modeled parametric CAD for a Core XY that does a decent job of minimizing footprint. I designed the setup for a work friend who was tracking a laser power meter with a galvo driven laser assembly. Core XY's are a neat means to achieve 2 axis motion. They're particularly useful for low inertia high + speed applications, due to the fact that they isolate several high mass components (particularly stepper motors) from their end effector and subsequent axes.
              <br /> <br />
-             <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/miscKinematics/parametricxy1.gif">
+             <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/miscKinematics/parametricxy1.gif">
              <h4><br />Form 2's at the time of filming were only capable of driving a single axis at a time.</h4>
              We got it running off of the wipe and peel motors of a Form2. You can find the model sans build platform and Formlabs related paraphernalia <a href="https://portfoliowebsite.s3.amazonaws.com/miscKinematics/ParametricXY.zip">here</a>. It uses some relatively inexpensive standoffs, shoulder screws + bushings, and THK's SRS7-M profile rails (although knockoffs will works as well). I think the layout I've wound up with makes some good compromises between maximizing footprint with respect to travel, mechanical complexity, and rigidity.
              </h2>
@@ -220,7 +220,7 @@
               <br /><br />
               I made a pair of hard jaws for the vise machined from an old parallel, and another pair of soft jaws from copper for delicate work. All the other components are currently 6061, but someday that will all turn into A2 depending on how useful they are.
               <br /><br />
-              <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/LMG+Vise/LMGVise2.jpg">
+              <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/LMG+Vise/LMGVise2.jpg">
               </p>
             </div>
           </figcaption>
@@ -241,9 +241,9 @@
                 <br /> <br />
                 Our initial plan to index edges of the hexagonal mirror using the TOF laser failed because we forgot about the fact that the TOF throw signal was only on intermittently. We got the project to a point where we were getting good distance measurements, but poor scans due to intermittent indexing signal. So our continuing engineering goal for the project is to shine a second low power laser (in the visible spectrum) at 100% duty cycle that is used purely to index each time you pass between facets of the polygon. Overall the project was a lot of fun and I got to use some unusual optical equipment, despite not winding up with a working scanner.
                 <br /> <br />
-                <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/polygonalScanningLIDAR/polygonalAnimation.gif">
+                <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/polygonalScanningLIDAR/polygonalAnimation.gif">
                 <h4><br />An animation I made while CADing up the scanner showing the laser's 120 deg optical path with varying mirror angle.</h4>
-                <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/polygonalScanningLIDAR/polygonalSetup.jpg">
+                <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/polygonalScanningLIDAR/polygonalSetup.jpg">
                 <h4><br />Annotated view of the assembly that hopefully helps in understanding what is going on.</h4>
               </p>
             </div>
@@ -260,7 +260,7 @@
               <p>
                 <a href="https://www.youtube.com/watch?v=SaLJOsxTbcE">You can see some early video of it cutting here,</a> (ignore the cardboard chip containment). Future plans for this tool are to replace a few remaining phenolic parts with aluminum, a low RPM spindle, rotary axis, and eventually film a machine overview.
               <br /> <br />
-              <img class="imageInline" alt="#" src="https://portfoliowebsite.s3.amazonaws.com/Personal+CNC/scrapcncHANGBOARD.jpg">   
+              <img class="imageInline lazy" data-src="https://portfoliowebsite.s3.amazonaws.com/Personal+CNC/scrapcncHANGBOARD.jpg">   
               <h4>A hangboard I machined from eucalyptus</h4>
               <br /> <br />
               This project is completely open source and you can check out the design on Fusion 360 <a href="http://a360.co/2vmS58B">here</a>. Feel free to get in touch if you are building a tool of your own or have any questions!
@@ -281,9 +281,9 @@
               </br></br>
               The motor is mounted between the seat stays and seat tube and is geared down to the rear wheel with a 2-stage HTD 5mm timing belt reduction of about 10.6:1. I started with a large plywood rear pulley located concentrically with the hub of the rear wheel and zip tied to the spokes of the wheel. I foolishly thought it would be fun to design a freewheel and build it from scratch which you can see a picture of below. I designed and machined/printed all of the parts in the freewheel aside from the bearing. The pawls are machined from 5160 spring steel, but the ratchet I never got around to waterjetting it in something that wasn't aluminum (note the aluminum shavings in the mounted picture below). The freewheel worked for about 2 weeks of daily commuting and then jammed and failed catastrophically when the acrylic pawl retention cover cracked. Since then I haven't had the heart to return to the project, but will eventually replace the custom freewheel with an OTS one mounted to the hub and a waterjet sprocket.
               </br></br>
-              <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/Ebike/ebikefreewheel1.jpg">   
+              <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/Ebike/ebikefreewheel1.jpg">   
               <h4>A custom freewheel I made for motor to rear hub transmission.</h4>  
-              <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/Ebike/ebikeHMroof.gif">   
+              <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/Ebike/ebikeHMroof.gif">   
             </br>
               <h4>Somehow this is the only video I have of the bike actually running - pre freewheel and final battery pack. </h4>  
               </p>
@@ -301,9 +301,9 @@
               <p>
               Each part included 5 tool changes and moved through 3 setups to achieve a total machining time of under 2 hours, while minimizing post-production through slot milling for the frames, machining for all hinge mounting hardware, and using extremely tight finishing stepovers. All workholding, part location, and tool changes were integrated directly into the machining process through a series of prompt-driven macros, allowing the parts to be manufactured by any shop employee.
               <br /><br />                
-              <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+Slot.gif">   
+              <img class="imageInline lazy" data-src=" https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+Slot.gif">   
                <h4>3-Axis slot milling toolpath used for lense grooves.</h4>
-              <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+hinge+machining.jpg">   
+              <img class="imageInline lazy" data-src=" https://s3.amazonaws.com/portfoliowebsite/Moku/Moku+hinge+machining.jpg">   
               <h4></br>Locating jig for final hinge-hardware machining. Toggle clamps were used to locate and hold-down temple arms in their negatives. </h4>
               </p>
             </div>
@@ -320,8 +320,8 @@
               <p>
               <h2>Automatic Tool Changer Redesign</h2>
               An ATC, or Automatic Tool Change System, is used by a CNC tool to eliminate the manual steps in a tool change, allowing for rapid production times. I designed and sourced a pneumatics system in collaboration with our vendors for the tool release, positive pressure, and cylinder with precission regulator to balance the weight of the tool’s z-axis. This included an in-house manufactured tool clip (The FEA for this part is shown in the thumbnail) for accepting tool holders when not in use, and changes to the toolbar's design that drastically reduced cost by eliinating a pneumatically actuated dust skirt previously necessary for the ATC. 
-              </br></br> <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/THK/ATC+Pneumatics.jpg" id="FEA">
-              </br></br> <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/THK/THK+Beam+Pneumatics.jpg" id="FEA">
+              </br></br> <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/THK/ATC+Pneumatics.jpg" id="FEA">
+              </br></br> <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/THK/THK+Beam+Pneumatics.jpg" id="FEA">
               </br>    
               <h2>Dust Shoe Redesign </h2>
               I led the redesign and manufacturing worflow for a series of dust shoes compatable with each of ShopBot’s 5 cutting tools. The redesign was backwards compatable and utilized shared non-fabricated parts for all iterations of the dust shoe. The redesign drastically reduced cost by eliminating powdercoated sheet metal parts, maximizing sheet yield, and adding a magnetically removable shroud for ease of use.
@@ -331,7 +331,7 @@
               <h2>5-Axis Redesign</h2>
               I led the testing and handled redesign specific changes for ShopBot’s 5-Axis tool. I built the first prototype using the new beam design and made as-built changes to the tool, which were ultimately incorporated into the product's engineering master. This included a new Z-axis cable carrier, proximity switch mounting and their associated macros, cable lengths and management.
               <br /> <br />
-              <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/THK/THK+5axis" id="THK5axis">
+              <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/THK/THK+5axis" id="THK5axis">
               </p>
             </div>
           </figcaption>
@@ -347,7 +347,7 @@
               <p>
               Climbing volumes are primarily sold pre-assembled, which typically includes a finish coat of paint or epoxy, mixed with an aggregate material to provide gripping texture. Holes for screw in t-nuts are also added, and are used for bolting additional holds to the volume. Depending on volume geometry, final volume (length^3 in this case) can increase by an order of magnitude in comparison to flat packed volume which effects shipping costs.
               <br /> <br />    
-              <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Volume/Volume+Cycle.gif">   
+              <img class="imageInline lazy" data-src=" https://s3.amazonaws.com/portfoliowebsite/Volume/Volume+Cycle.gif">   
               <h4>Animation showing parameter adjustments made to a 4-sided polyhedron. Not shown is the flat-pattern geometry and toolpaths adjusting in real-time.</h4>               
               I have modeled several of the most common climbing volumes parametrically, such that custom volumes of any desired dimension can be generated. The volumes are then copied and mated flat to a 4x8’ sheet of pywood. Parameters can be updated resulting in the 3D model of the volume to update, but also the flat pattern in real time, allowing for efficient nesting. The most novel aspect of this project is that the miters are cut through a 3D offset carving operation by a CNC tool, allowing for unrestricted convex miter angles to be cut. Edge quality is directly proportional to stepover, but a stepover of 0.03” has been found to work well for a 45 deg miter, which can be cut rapidly and in a single operation. With adequate vacuum hold-down, tabs were not found to be necesary, and parts can come directly off of the tool ready for glue-up and assembly. The greatest benefit of this process comes in maximizing nesting efficieny, resulting in more efficient material use.
               <br /> <br />
@@ -430,9 +430,9 @@
               Models including all necessary CAD and CAM for this project can be found <a href="http://a360.co/2xe5pti">here</a>.
               <br />
               <br />   
-              <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Assembled.jpg">   
+              <img class="imageInline lazy" data-src=" https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Assembled.jpg">   
               <h4><br /> The desk configured as a work table, shown assembled immediately after manufacturing using only a chisel for tab removal and mallet for assembly.</h4>
-              <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Profile2.jpg">   
+              <img class="imageInline lazy" data-src=" https://s3.amazonaws.com/portfoliowebsite/Desk/Desk+Profile2.jpg">   
               </p>
             </div>
           </figcaption>
@@ -446,7 +446,7 @@
           <figcaption class="thumbnailSubText">The Handibot is an Open Source portable CNC tool that allows users to bring the capabilities of a digital fabrication directly to their job sight in a compact and robust package. I led the design and release of the <a href="https://handi-dev.myshopify.com/products/handibot-manual-2-axis?variant=37483025998">Manual +2 Axis Accessory</a> over a 3 month internship at ShopBot Tools. The final design incorporated both a manual indexer and 5th axis into one modular accessory geared towards educators and the maker community.
             <div class="modalOnly">              
               <p>
-                <br /><img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Manual+%2B2/Manual+Fish.jpg">   
+                <br /><img class="imageInline lazy" data-src=" https://s3.amazonaws.com/portfoliowebsite/Manual+%2B2/Manual+Fish.jpg">   
                 <h4> As part of the product's testing procedure, I machined several parts in both 4 and 5 axis. The swimbait shown above was machined in two operations with the accessory in the 4 axis configuration, and is a good example of the way the accessory can be used to expand a 3-axis tool at minimal cost.</h4>
                 For more information on this project check out the <a href="http://docs.handibot.com/doc-output/Manual_+2_Axis_Guide_(004588).pdf">Setup and Use Guide</a>.
                 <br /> <br />
@@ -469,12 +469,12 @@
               <p>
                
                 After building the bench top, I added the loft shown below, and fabricated a pair of steel legs inspired by mid-century style hairpin legs. Design constraints for the legs were that they be strong enough to support two people, and that their fastening method be hidden when looking at the bench from above. The final design achieves this by bracketing to each slat individually, which also helps in distrubuting load accross the depth of the bench. I built the legs with help from my uncle at <a href="http://arpdesignstudio.com/content/">ARP Design.</a> In the future I hope to publish a more detailed walkthrough for this build, but have made the models available below!</br></br> 
-                <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/Nelson+Bench/Nelson+Machining.gif">   
+                <img class="imageInline lazy" data-src=" https://s3.amazonaws.com/portfoliowebsite/Nelson+Bench/Nelson+Machining.gif">   
                 <h4>To soften the bench's hard rectangular geometry, a variable lofted fillet was milled from the underside of the bench top using a ball-nose bit after the initial glue-up.</h4>    
                 <blockquote><i>The files for this project are open source and fully parametric, meaning that variables such as material thickness, height and width can all be changed dynamically, without having to directly edit the 3D model or update the machining operation. In some cases the layout of the final flat pattern must adjusted. Feel free to get in touch if you are interested in working with these models or have any questions!</i></blockquote>
                 Models including all necessary CAD and CAM for this project can be found <a href="http://a360.co/2vZCCtH">here</a>.
               </br></br>
-                <img class="imageInline" alt="#" src=" https://portfoliowebsite.s3.amazonaws.com/Nelson+Bench/nelson+bench+fig+trees.jpg">   
+                <img class="imageInline lazy" data-src=" https://portfoliowebsite.s3.amazonaws.com/Nelson+Bench/nelson+bench+fig+trees.jpg">   
               </p>
             </div>
         </div>
@@ -489,7 +489,7 @@
               <p>
                 Design constraints for the final product were that it be backwards compatible with all existing ShopBots, repeatable to within +/- 0.001” of an inch, and be able to used to zero directly to the surface of material to be machined, as well as mounted in a fixed location to zero to table surface.
                 <br /> <br />
-                <img class="imageInline" alt="#" src=" https://s3.amazonaws.com/portfoliowebsite/PSZZP/PSZZP+Section.jpg">   
+                <img class="imageInline lazy" data-src=" https://s3.amazonaws.com/portfoliowebsite/PSZZP/PSZZP+Section.jpg">   
                 <h4> More information on the plate’s final design can be found in a blog post <a href="http://www.shopbotblog.com/2016/02/new-shopbot-accessory-the-pressure-sensitive-z-zero-plate/">here</a></h4>
                 The plate is currently sold as an accessory and has been incorporated directly into ShopBot’s ATC system, as well as the HandiBot.
                 </p>
@@ -522,7 +522,7 @@
               <p>
                 In visual basic, I programmed a tool handler that created a database of tools for the quick change spindle and applied offsets, including options for dual-z spindles, as well as fixed z-zero plates. The handler was fully integrated into ShopBot’s control system and is currently in use on two custom machines.
               </p>  </br>
-              <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/QTC/QTC+Tool.jpg">
+              <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/QTC/QTC+Tool.jpg">
             </div>
           </figcaption>
         </div>
@@ -562,28 +562,28 @@
             <div class="modalOnly">
               <p>
                   </br>
-              <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+2.jpg">
+              <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+2.jpg">
                 
                   </br>
-              <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+3.jpg">
+              <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+3.jpg">
                 
                   </br>
-              <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+4.jpg">
+              <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+4.jpg">
                 
                   </br>
-              <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+5.jpg">
+              <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+5.jpg">
                 
                   </br>
-              <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+6.jpg">
+              <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+6.jpg">
                 
                   </br>
-              <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+7.jpg">
+              <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+7.jpg">
                 
                   </br>
-              <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+8.jpg">
+              <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+8.jpg">
                 
                   </br>
-              <img class="imageInline" alt="#" src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+9.jpg">
+              <img class="imageInline lazy" data-src="https://s3.amazonaws.com/portfoliowebsite/Art/Figure+Drawing+Web+9.jpg">
                 
               </p>
             </div>
